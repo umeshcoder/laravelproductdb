@@ -7,7 +7,7 @@ class StripeController extends Controller
 {
     public function checkout()
     {
-        return view('checkout');
+        return view('products.checkout');
     }
 
     public function Session(Request $request)
@@ -38,7 +38,7 @@ class StripeController extends Controller
             'cancel_url'  => route('checkout'),
         ]);
  
-        return redirect()->away($Session->url);
+        return redirect()->away($Session->products.Session);
     }
  
     public function success()

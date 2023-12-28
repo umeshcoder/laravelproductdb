@@ -67,6 +67,10 @@ class ProductController extends Controller
 
     public function home()
     {
-        return view('home');
+        return view('products.home');
+    }
+    public function logout()
+    {
+        return view('products.login');
     }
 }
