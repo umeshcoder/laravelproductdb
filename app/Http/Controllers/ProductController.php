@@ -64,4 +64,9 @@ class ProductController extends Controller
         }
         return back()->with('error','Error email or password');
     }
+
+    public function home()
+    {
+        return view('home');
+    }
 }

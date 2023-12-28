@@ -12,7 +12,7 @@ class StripeController extends Controller
 
     public function Session(Request $request)
     {
-        
+        \Stripe\Stripe::setApiKey(config('stripe.sk'));
  
         $productname = $request->get('productname');
         $totalprice = $request->get('total');

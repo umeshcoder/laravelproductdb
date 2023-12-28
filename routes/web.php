@@ -28,7 +28,7 @@ Route::post('/login',[ProductController::class,'loginpost'])->name('product.logi
 });
 
 Route::group(['middleware' => 'auth'], function () {
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [ProductController::class, 'home']);
 Route::delete('/logout', [ProductController::class, 'logout'])->name('logout');
 });
 
